@@ -1,10 +1,11 @@
 ----------------------------------------------
 -- PROCEDURE CalculeMoyenne
 ----------------------------------------------
-CREATE OR REPLACE PROCEDURE CalculeMoyenne(p_idGroupeCours GroupeCours.idGroupeCours%type) is
-    v_moyenne Evaluation.moyenneEvaluation%type;
 DECLARE
     ex_id_inexistant EXCEPTION;
+
+CREATE OR REPLACE PROCEDURE CalculeMoyenne(p_idGroupeCours GroupeCours.idGroupeCours%type) is
+    v_moyenne Evaluation.moyenneEvaluation%type;
 BEGIN
     SELECT AVG(Res.resultatEtudiant) INTO v_moyenne
         FROM Resultat Res NATURAL JOIN Evaluation Ev
