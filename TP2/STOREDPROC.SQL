@@ -17,7 +17,6 @@ EXCEPTION
     WHEN no_data_found THEN
         RAISE_APPLICATION_ERROR(-20100, 'GroupeCours inexistant.');
     WHEN OTHERS THEN
-        RAISE_APPLICATION_ERROR(-20001, 'Erreur interne.' - '
-                                        ||SQLCODE||' -ERROR'||SQLERRM);
+        RAISE_APPLICATION_ERROR(-20001, 'Erreur interne. - ' ||SQLCODE||' -ERROR'||SQLERRM);
 END CalculeMoyenne;
 /    
