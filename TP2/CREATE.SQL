@@ -268,6 +268,10 @@ CREATE TABLE Evaluation(
     evaluationEstDiffuse        NUMBER(1)
                                 CONSTRAINT nn_Eval_diffuse NOT NULL
                                 CONSTRAINT ck_Eval_diffuse CHECK(evaluationEstDiffuse = 0 OR evaluationEstDiffuse = 1),
+	moyenneEvaluation           NUMBER(2,2)
+	                            CONSTRAINT n_Res_moyenne NULL,
+	ecartTypeEvaluation         NUMBER(2,2)
+	                            CONSTRAINT n_Res_moyenne NULL,
     idGroupeCours               NUMBER
                                 CONSTRAINT nn_Eval_idGC NOT NULL
                                 CONSTRAINT fk_Eval_idGC REFERENCES GroupeCours(idGroupeCours)
