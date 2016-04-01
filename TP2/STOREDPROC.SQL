@@ -8,7 +8,7 @@ BEGIN
         FROM Resultat Res NATURAL JOIN Evaluation Ev
             WHERE Ev.idGroupeCours = p_idGroupeCours;
 
-    IF v_moyenne = NULL THEN
+    IF v_moyenne IS NULL THEN
         RAISE_APPLICATION_ERROR(-20100, 'GroupeCours inexistant.');
     ELSE
         UPDATE Evaluation
