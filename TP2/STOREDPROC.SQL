@@ -9,7 +9,7 @@ BEGIN
             WHERE Ev.idGroupeCours = p_idGroupeCours;
 
     IF v_moyenne IS NULL THEN
-        RAISE_APPLICATION_ERROR(-20100, 'GroupeCours inexistant.');
+        DBMS_OUTPUT.PUT_LINE('GroupeCours inexistant.');        
     ELSE
         UPDATE Evaluation
             SET moyenneEvaluation = v_moyenne
