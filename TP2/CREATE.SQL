@@ -1,7 +1,7 @@
 ----------------------------------------------
 -- CREATE.SQL
 ----------------------------------------------
-SET ECHO ON
+SET SERVEROUTPUT ON
 ALTER SESSION SET NLS_DATE_FORMAT = 'DD/MM/YYYY'
 /
 ----------------------------------------------
